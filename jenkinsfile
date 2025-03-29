@@ -1,6 +1,7 @@
 pipeline{
-    agent any 
-    Node{
+    agent {docker 'node:6.3'}
+    Stages{
+
         Stage('package'){
             Steps{
                 bat 'npm install'
