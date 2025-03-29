@@ -10,6 +10,12 @@ pipeline{
 
 
          }
+
+stage ('run'){
+steps{
+bat 'npm run'
+}
+}
         stage('test'){
             steps{
 
