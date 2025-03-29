@@ -1,14 +1,14 @@
 pipeline{
     agent {docker 'node:6.3'}
-    Stages{
+    stages{
 
-        Stage('package'){
+       stage('package'){
             Steps{
                 bat 'npm install'
             }
 
         }
-        Stage('test'){
+        stage('test'){
             Steps{
                bat 'npm test' 
                echo "No tests defined"
@@ -16,7 +16,7 @@ pipeline{
             }
 
         }
-        Stage('build'){
+        stage('build'){
             Steps{
                 bat 'npm run build' 
             }
